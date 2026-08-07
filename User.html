@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly User Dashboard</title>
+
+<link rel="stylesheet" href="User.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+    <img src="image-12.webp" alt="Stackly Logo">
+</div>
+
+<ul>
+
+<li class="active" onclick="showPage('dashboard')">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</li>
+
+<li onclick="showPage('profile')">
+<i class="fa-solid fa-user"></i>
+<span>Profile</span>
+</li>
+
+<li onclick="showPage('orders')">
+<i class="fa-solid fa-box"></i>
+<span>Orders</span>
+</li>
+
+<li onclick="showPage('wishlist')">
+<i class="fa-solid fa-heart"></i>
+<span>Wishlist</span>
+</li>
+
+<li onclick="showPage('notification')">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</li>
+
+<li onclick="showPage('settings')">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</li>
+
+<li onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>Logout</span>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<!-- Header -->
+
+<header>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="search-box">
+
+<input type="text" placeholder="Search...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+<div class="user-info">
+
+    <img src="https://i.pravatar.cc/100?img=12" alt="User">
+
+    <div>
+        <h4>Mahesh</h4>
+        <p id="userEmail"></p>
+    </div>
+
+</div>
+
+</header>
+
+<!-- Dashboard -->
+
+<section id="dashboard" class="page active">
+
+<h1>Welcome Back 👋</h1>
+
+<p>Your dashboard overview</p>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h2>145</h2>
+
+<p>Total Orders</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-heart"></i>
+
+<h2>38</h2>
+
+<p>Wishlist</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-truck"></i>
+
+<h2>24</h2>
+
+<p>Delivered</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h2>$2,850</h2>
+
+<p>Total Spending</p>
+
+</div>
+
+</div>
+
+<div class="dashboard-grid">
+
+<div class="activity">
+
+<h2>Recent Activity</h2>
+
+<ul>
+
+<li>✔ Order #1024 Delivered</li>
+
+<li>✔ Payment Successful</li>
+
+<li>✔ Wishlist Updated</li>
+
+<li>✔ Profile Updated</li>
+
+<li>✔ New Offer Available</li>
+
+</ul>
+
+</div>
+
+<div class="offer-card">
+
+<h2>Special Offer 🎉</h2>
+
+<p>
+
+Get <strong>30% OFF</strong>
+
+on your next purchase.
+
+</p>
+
+<button>Shop Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFILE SECTION STARTS -->
+ <!-- ================= PROFILE ================= -->
+
+<section id="profile" class="page">
+
+<div class="profile-container">
+
+<div class="profile-card">
+
+<img src="images/user.jpg" alt="User">
+
+<h2>Mahesh Billa</h2>
+
+<p>Premium User</p>
+
+<button>Edit Profile</button>
+
+</div>
+
+<div class="profile-details">
+
+<h2>Personal Information</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<label>Full Name</label>
+<input type="text" value="Mahesh Billa">
+</div>
+
+<div class="info-box">
+<label>Email</label>
+<input type="email" value="maheshbilla03@gmail.com">
+</div>
+
+<div class="info-box">
+<label>Phone</label>
+<input type="text" value="+91 9876543210">
+</div>
+
+<div class="info-box">
+<label>Location</label>
+<input type="text" value="Andhra Pradesh">
+</div>
+
+</div>
+
+<button class="save-btn">
+Save Changes
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ORDERS ================= -->
+
+<section id="orders" class="page">
+
+<h1>My Orders</h1>
+
+<div class="orders-grid">
+
+<div class="order-card">
+
+<i class="fa-solid fa-box-open"></i>
+
+<h3>Premium Cotton Fabric</h3>
+
+<p>Order ID : #ST1001</p>
+
+<span class="delivered">
+Delivered
+</span>
+
+<button>View Details</button>
+
+</div>
+
+<div class="order-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Silk Material</h3>
+
+<p>Order ID : #ST1002</p>
+
+<span class="shipping">
+Shipping
+</span>
+
+<button>Track Order</button>
+
+</div>
+
+<div class="order-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Denim Fabric</h3>
+
+<p>Order ID : #ST1003</p>
+
+<span class="pending">
+Pending
+</span>
+
+<button>View Status</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WISHLIST ================= -->
+
+<section id="wishlist" class="page">
+
+<h1>Wishlist</h1>
+
+<div class="wishlist-grid">
+
+<div class="wishlist-card">
+
+<img src="image-16.webp" alt="">
+
+<h3>Organic Cotton</h3>
+
+<p>$120</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+<div class="wishlist-card">
+
+<img src="image-13.webp" alt="">
+
+<h3>Premium Denim</h3>
+
+<p>$180</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+<div class="wishlist-card">
+
+<img src="image-15.webp" alt="">
+
+<h3>Luxury Linen</h3>
+
+<p>$160</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NOTIFICATION SECTION START ================= --><!-- ================= NOTIFICATIONS ================= -->
+
+<section id="notification" class="page">
+
+<h1>Notifications</h1>
+
+<div class="notification-container">
+
+<div class="notification-card">
+
+<div class="icon success">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+
+<div class="content">
+<h3>Order Delivered</h3>
+<p>Your order <strong>#ST1001</strong> has been delivered successfully.</p>
+<span>2 Hours Ago</span>
+</div>
+
+</div>
+
+<div class="notification-card">
+
+<div class="icon warning">
+<i class="fa-solid fa-truck"></i>
+</div>
+
+<div class="content">
+<h3>Order Shipped</h3>
+<p>Your order <strong>#ST1002</strong> is on the way.</p>
+<span>Yesterday</span>
+</div>
+
+</div>
+
+<div class="notification-card">
+
+<div class="icon info">
+<i class="fa-solid fa-gift"></i>
+</div>
+
+<div class="content">
+<h3>Special Offer</h3>
+<p>Get <strong>30% OFF</strong> on premium fabrics this week.</p>
+<span>Today</span>
+</div>
+
+</div>
+
+<div class="notification-card">
+
+<div class="icon danger">
+<i class="fa-solid fa-credit-card"></i>
+</div>
+
+<div class="content">
+<h3>Payment Reminder</h3>
+<p>Your pending payment is due tomorrow.</p>
+<span>Just Now</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SETTINGS ================= -->
+
+<section id="settings" class="page">
+
+<h1>Account Settings</h1>
+
+<div class="settings-wrapper">
+
+<div class="settings-box">
+
+<h2>Profile Settings</h2>
+
+<div class="input-box">
+<label>Full Name</label>
+<input type="text" value="Mahesh Billa">
+</div>
+
+<div class="input-box">
+<label>Email</label>
+<input type="email" value="maheshbilla03@gmail.com">
+</div>
+
+<div class="input-box">
+<label>Phone</label>
+<input type="text" value="+91 9876543210">
+</div>
+
+<button class="save-btn">
+Save Profile
+</button>
+
+</div>
+
+<div class="settings-box">
+
+<h2>Preferences</h2>
+
+<div class="toggle">
+
+<span>Email Notifications</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="toggle">
+
+<span>SMS Alerts</span>
+
+<input type="checkbox">
+
+</div>
+
+<div class="toggle">
+
+<span>Dark Mode</span>
+
+<input type="checkbox">
+
+</div>
+
+<div class="toggle">
+
+<span>Auto Login</span>
+
+<input type="checkbox" checked>
+
+</div>
+
+<button class="save-btn">
+Save Settings
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Stackly User Dashboard.
+
+Designed by <strong>Mahesh Billa</strong>
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="User.js"></script>
+
+</body>
+</html>

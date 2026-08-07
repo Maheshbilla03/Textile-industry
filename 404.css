@@ -1,0 +1,276 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#08131f;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+
+}
+
+.error-page{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:20px;
+text-align:center;
+
+}
+
+.content{
+
+max-width:650px;
+
+}
+
+.content h1{
+
+font-size:180px;
+color:#ffb703;
+line-height:1;
+
+animation:bounce 2s infinite;
+
+}
+
+.content h1 span{
+
+color:#d62828;
+
+}
+
+.content h2{
+
+color:#fff;
+font-size:42px;
+margin:15px 0;
+
+}
+
+.content p{
+
+color:#ccc;
+line-height:30px;
+margin:20px 0;
+
+}
+
+/* Search */
+
+.search-box{
+
+display:flex;
+margin:30px auto;
+max-width:500px;
+
+}
+
+.search-box input{
+
+flex:1;
+padding:18px;
+border:2px solid #ffb703;
+background:transparent;
+color:#fff;
+outline:none;
+
+}
+
+.search-box button{
+
+width:70px;
+border:none;
+background:#ffb703;
+cursor:pointer;
+font-size:18px;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+
+}
+
+.buttons a{
+
+padding:15px 35px;
+border:2px solid #ffb703;
+color:#ffb703;
+text-decoration:none;
+transition:.4s;
+
+}
+
+.buttons a:hover{
+
+background:#ffb703;
+color:#08131f;
+
+}
+
+/* Gears */
+
+.gear{
+
+font-size:100px;
+color:#d62828;
+
+animation:rotate 8s linear infinite;
+
+}
+
+.right{
+
+animation-direction:reverse;
+
+}
+
+/* Circles */
+
+.circle{
+
+position:absolute;
+border:2px solid rgba(255,183,3,.2);
+border-radius:50%;
+
+animation:float 8s ease-in-out infinite;
+
+}
+
+.c1{
+
+width:180px;
+height:180px;
+top:40px;
+left:5%;
+
+}
+
+.c2{
+
+width:280px;
+height:280px;
+right:-70px;
+bottom:-70px;
+
+animation-delay:2s;
+
+}
+
+.c3{
+
+width:120px;
+height:120px;
+top:120px;
+right:20%;
+
+animation-delay:4s;
+
+}
+
+/* Countdown */
+
+.countdown{
+
+margin-top:35px;
+color:#ffb703;
+
+}
+
+#time{
+
+font-size:28px;
+
+}
+
+/* Animations */
+
+@keyframes rotate{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.error-page{
+
+flex-direction:column;
+
+}
+
+.gear{
+
+display:none;
+
+}
+
+.content h1{
+
+font-size:120px;
+
+}
+
+.content h2{
+
+font-size:30px;
+
+}
+
+}

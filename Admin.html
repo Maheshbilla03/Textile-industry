@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Admin Dashboard</title>
+
+<link rel="stylesheet" href="Admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Mobile Menu -->
+
+<button class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <img src="image-12.webp" alt="Logo">
+
+        <!-- <h2>STACKLY</h2> -->
+
+    </div>
+
+    <div class="admin-profile">
+
+        <!-- <img src="admin.png" alt="Admin"> -->
+
+        <h3>Admin</h3>
+<p id="adminEmail"></p>
+
+    </div>
+
+    <ul>
+
+        <li class="active" onclick="showPage('dashboard')">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+        <li onclick="showPage('yarn')">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            Yarn & Material
+        </li>
+
+        <li onclick="showPage('fabric')">
+            <i class="fa-solid fa-industry"></i>
+            Fabric Production
+        </li>
+
+        <li onclick="showPage('reports')">
+            <i class="fa-solid fa-chart-column"></i>
+            Reports
+        </li>
+
+        <li onclick="showPage('settings')">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </li>
+
+        <li onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="page active">
+
+<h1>Dashboard Overview</h1>
+
+<p>
+Welcome to Stackly Textile Manufacturing Dashboard.
+</p>
+
+<div class="dashboard-cards">
+
+<div class="card">
+
+<i class="fa-solid fa-industry"></i>
+
+<h3>Manufacturing</h3>
+
+<p>
+Monitor daily production,
+machine status and factory performance.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-boxes-stacked"></i>
+
+<h3>Inventory</h3>
+
+<p>
+Track yarn,
+fabric rolls,
+warehouse stock and raw materials.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-file-invoice-dollar"></i>
+
+<h3>Orders</h3>
+
+<p>
+Manage customer orders,
+billing,
+payments and delivery schedules.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Performance</h3>
+
+<p>
+View analytics,
+production reports,
+growth and export statistics.
+</p>
+
+</div>
+
+</div>
+
+<!-- Summary -->
+
+<div class="welcome-box">
+
+<h2>Today's Summary</h2>
+
+<p>
+
+✔ Production Orders :
+<strong>128</strong>
+
+<br>
+
+✔ Active Machines :
+<strong>45</strong>
+
+<br>
+
+✔ Completed Shipments :
+<strong>22</strong>
+
+<br>
+
+✔ Quality Approval :
+<strong>98.7%</strong>
+
+<br>
+
+✔ Export Countries :
+<strong>35+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= YARN & MATERIAL ================= -->
+
+<section id="yarn" class="page">
+
+    <h1>Yarn & Material Sourcing</h1>
+
+    <p>
+        Manage premium yarns, cotton, silk, linen, wool and textile raw materials.
+    </p>
+
+    <div class="material-section">
+
+        <div class="title-box">
+            <span>Material Management</span>
+            <h2>Yarn & Material Sourcing</h2>
+
+            <p>
+                Monitor raw materials, approve requests and manage textile inventory.
+            </p>
+        </div>
+
+        <div class="status-grid">
+
+            <div class="status-card">
+                <h3>05</h3>
+                <span>Sourced Materials</span>
+            </div>
+
+            <div class="status-card">
+                <h3>02</h3>
+                <span>Approved</span>
+            </div>
+
+            <div class="status-card">
+                <h3>03</h3>
+                <span>Pending</span>
+            </div>
+
+            <div class="status-card">
+                <h3>02</h3>
+                <span>Shipments</span>
+            </div>
+
+        </div>
+
+        <div class="materials">
+
+            <div class="material-card">
+
+                <img src="image-5.webp" alt="Cotton">
+
+                <h3>Organic Cotton</h3>
+
+                <p>
+                    Premium quality organic cotton for textile production.
+                </p>
+
+                <span class="approved">Approved</span>
+
+                <div class="btns">
+                   <button onclick="window.location.href='404.html'">Approve</button>
+<button onclick="window.location.href='404.html'">Reject</button>
+                </div>
+
+            </div>
+
+            <div class="material-card">
+
+                <img src="image-16.webp" alt="Silk">
+
+                <h3>Silk Blend</h3>
+
+                <p>
+                    High-quality silk fabric with smooth finish.
+                </p>
+
+                <span class="pending">Pending</span>
+
+                <div class="btns">
+                 <button onclick="window.location.href='404.html'">Approve</button>
+<button onclick="window.location.href='404.html'">Reject</button>
+                </div>
+
+            </div>
+
+            <div class="material-card">
+
+                <img src="image-15.webp" alt="Linen">
+
+                <h3>Linen Fabric</h3>
+
+                <p>
+                    Eco-friendly linen for premium textile manufacturing.
+                </p>
+
+                <span class="approved">Approved</span>
+
+                <div class="btns">
+                   <button onclick="window.location.href='404.html'">Approve</button>
+<button onclick="window.location.href='404.html'">Reject</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FABRIC PRODUCTION ================= -->
+
+<section id="fabric" class="page">
+
+    <h1>Fabric Production</h1>
+
+    <p>
+        Monitor weaving, dyeing, finishing and quality inspection.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+
+            <img src="image-5.webp" alt="Fabric">
+
+            <div class="product-content">
+
+                <span class="badge production">In Production</span>
+
+                <h3>Organic Cotton Fabric</h3>
+
+                <p>
+                    Sustainable cotton fabric with premium finishing.
+                </p>
+
+                <ul>
+                    <li>GSM : 220</li>
+                    <li>Color : White</li>
+                    <li>Stock : 2500 Meters</li>
+                </ul>
+
+                <a href="404.html">View Details</a>
+
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="image-15.webp" alt="Fabric">
+
+            <div class="product-content">
+
+                <span class="badge ready">Export Ready</span>
+
+                <h3>Premium Denim</h3>
+
+                <p>
+                    Export quality denim fabric with high durability.
+                </p>
+
+                <ul>
+                    <li>GSM : 320</li>
+                    <li>Color : Indigo</li>
+                    <li>Stock : 1900 Meters</li>
+                </ul>
+
+                <a href="404.html">View Details</a>
+
+            </div>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="image-17.webp" alt="Fabric">
+
+            <div class="product-content">
+
+                <span class="badge pending">Quality Check</span>
+
+                <h3>Natural Linen</h3>
+
+                <p>
+                    Lightweight premium linen with breathable texture.
+                </p>
+
+                <ul>
+                    <li>GSM : 180</li>
+                    <li>Color : Beige</li>
+                    <li>Stock : 980 Meters</li>
+                </ul>
+
+                <a href="404.html">View Details</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="summary-box">
+
+        <div>
+            <h3>150+</h3>
+            <p>Fabric Products</p>
+        </div>
+
+        <div>
+            <h3>98%</h3>
+            <p>Quality Approval</p>
+        </div>
+
+        <div>
+            <h3>45</h3>
+            <p>Export Orders</p>
+        </div>
+
+        <div>
+            <h3>12K+</h3>
+            <p>Inventory Stock</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= REPORTS SECTION START ================= --><!-- ================= YARN SECTION START ================= --><!-- ================= REPORTS ================= -->
+
+<section id="reports" class="page">
+
+    <div class="reports-header">
+
+        <span>BUSINESS ANALYTICS</span>
+
+        <h2>Reports & Analytics</h2>
+
+        <p>
+            Monitor production performance, sales growth,
+            inventory, export orders and quality reports.
+        </p>
+
+    </div>
+
+    <div class="report-cards">
+
+        <div class="report-card">
+            <h3>₹18.5M</h3>
+            <p>Total Revenue</p>
+        </div>
+
+        <div class="report-card">
+            <h3>1250</h3>
+            <p>Production Orders</p>
+        </div>
+
+        <div class="report-card">
+            <h3>98.5%</h3>
+            <p>Quality Score</p>
+        </div>
+
+        <div class="report-card">
+            <h3>65</h3>
+            <p>Export Clients</p>
+        </div>
+
+    </div>
+
+    <div class="chart-grid">
+
+        <div class="chart-box">
+            <h3>Monthly Production</h3>
+            <img src="images/chart-1.png" alt="">
+        </div>
+
+        <div class="chart-box">
+            <h3>Sales Report</h3>
+            <img src="images/chart-2.png" alt="">
+        </div>
+
+        <div class="chart-box">
+            <h3>Inventory</h3>
+            <img src="images/chart-3.png" alt="">
+        </div>
+
+        <div class="chart-box">
+            <h3>Export Orders</h3>
+            <img src="images/chart-4.png" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SETTINGS ================= -->
+
+<section id="settings" class="page">
+
+    <div class="settings-header">
+
+        <span>ACCOUNT SETTINGS</span>
+
+        <h2>Profile & System Settings</h2>
+
+        <p>
+            Update profile, password and dashboard preferences.
+        </p>
+
+    </div>
+
+    <div class="settings-container">
+
+        <!-- Profile -->
+
+        <div class="settings-card">
+
+            <h3>Profile Information</h3>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" value="Mahesh Billa">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" value="maheshbilla03@gmail.com">
+            </div>
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" value="+91 9876543210">
+            </div>
+
+        </div>
+
+        <!-- Security -->
+
+        <div class="settings-card">
+
+            <h3>Security</h3>
+
+            <div class="input-group">
+                <label>Current Password</label>
+                <input type="password">
+            </div>
+
+            <div class="input-group">
+                <label>New Password</label>
+                <input type="password">
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password">
+            </div>
+
+        </div>
+
+        <!-- Preferences -->
+
+        <div class="settings-card">
+
+            <h3>Preferences</h3>
+
+            <div class="toggle-row">
+                <span>Email Notifications</span>
+                <input type="checkbox" checked>
+            </div>
+
+            <div class="toggle-row">
+                <span>SMS Alerts</span>
+                <input type="checkbox">
+            </div>
+
+            <div class="toggle-row">
+                <span>Dark Mode</span>
+                <input type="checkbox">
+            </div>
+
+            <div class="toggle-row">
+                <span>Auto Backup</span>
+                <input type="checkbox" checked>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="save-btn">
+        Save Settings
+    </button>
+
+</section>
+
+<!-- ================= END MAIN ================= -->
+
+</div>
+
+<script src="Admin.js"></script>
+
+</body>
+</html>
